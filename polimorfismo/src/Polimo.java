@@ -1,13 +1,8 @@
-public abstract class Polimo {
-    public static void Imprime(Cuadrado cuadrado,Triangulo triangulo){
-
-    }
-
-
-
-
-    public static void main(String[] args) {
-
+public class Polimo {
+    public void imprime(Figura figura){
+        System.out.println(figura.toString());
+        figura.pideDatos();
+        figura.imprimeDatos();
 
     }
 }

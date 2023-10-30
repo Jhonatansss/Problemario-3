@@ -1,23 +1,25 @@
+import java.util.Scanner;
 public class Triangulo extends Figura{
     private float base;
-    private float altura;
+    private  float altura;
+    Scanner sc = new Scanner(System.in);
 
-    public Triangulo(float base, float altura) {
-        this.base = base;
-        this.altura = altura;
-    }
-
-    public Triangulo() {
+    public Triangulo(String nombreFigura) {
+        super(nombreFigura);
     }
 
 
-    public void pide_Datos() {
-        System.out.println("Ingrese la base del triangulo: ");
-        System.out.println("Ingrese la altura del triangulo: ");
+    @Override
+    public void pideDatos(){
+        System.out.println("ingrese la base del Triangulo:");
+        base = sc.nextFloat();
+        System.out.println("Ingrese la altura del Triangulo");
+        altura= sc.nextFloat();
     }
 
-    public void imprime_Area() {
-
-
+    @Override
+    public void imprimeDatos(){
+        float area = base*altura/2;
+        System.out.println("El area del Triangulo es:"+area);
     }
 }

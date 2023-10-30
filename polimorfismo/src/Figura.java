@@ -1,14 +1,20 @@
 public abstract class Figura {
-    public abstract void pide_Datos();
-    public abstract void imprime_Area();
+    protected String nombreFigura;
 
-    protected Cuadrado cuadrado;
-    protected Triangulo triangulo;
-
-    public Figura() {
-        cuadrado = new Cuadrado();
-        triangulo = new Triangulo();
+    public Figura(String nombreFigura) {
+        this.nombreFigura = nombreFigura;
     }
 
+
+    public void pideDatos(){
+    }
+
+    public void imprimeDatos(){
+    }
+
+    @Override
+    public String toString() {
+        return  nombreFigura;
+    }
 
 }

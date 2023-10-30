@@ -1,23 +1,23 @@
 import java.util.Scanner;
 
 public class Cuadrado extends Figura{
+    Scanner sc = new Scanner(System.in);
     private float lado;
 
-    public Cuadrado(float lado) {
-        this.lado = lado;
+    public Cuadrado(String nombreFigura) {
+        super(nombreFigura);
     }
 
-    public Cuadrado() {
+    @Override
+    public void pideDatos(){
+        System.out.println("ingrese el lado de cuadrado:");
+        lado = sc.nextFloat();
     }
 
-    public void pide_Datos() {
-        System.out.println("ingrese el lado del cuadrado");
+    @Override
+    public void imprimeDatos(){
+        float area;
+        area= lado*lado;
+        System.out.println("El area del cuadrado es:"+ area);
     }
-
-    public void imprime_Area(){
-        double result=lado*lado;
-        System.out.println("El resultado es :"+result);
-
-    }
-
 }

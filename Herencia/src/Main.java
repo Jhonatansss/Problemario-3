@@ -22,8 +22,11 @@ public class Main {
         /*for (Villano villan : listVilla) {
             System.out.println(villan);
         }*/
-
+        VillanoDeUltratumba villa = new VillanoDeUltratumba(18,"elias","mal");
+        villa.asustar();
+        villa.gritar();
     }
+
 
 
 
